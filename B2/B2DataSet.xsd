@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2DataSet" targetNamespace="http://tempuri.org/B2DataSet.xsd" xmlns:mstns="http://tempuri.org/B2DataSet.xsd" xmlns="http://tempuri.org/B2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=sigrid;Initial Catalog=B2;Persist Security Info=True;User ID=sa;Password=rast4y!?" IsAppSettingsProperty="false" Modifier="Assembly" Name="sigrid.B2.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_Betalning_kontrolluppgift_UtskickTableAdapter" GeneratorDataComponentClassName="v_Betalning_kontrolluppgift_UtskickTableAdapter" Name="v_Betalning_kontrolluppgift_Utskick" UserDataComponentName="v_Betalning_kontrolluppgift_UtskickTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sigrid.B2.dbo" DbObjectName="B2.dbo.v_Betalning_kontrolluppgift_Utskick" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT år, Efternamn, förnamn, personnummer, OrganisationsNummer, calc_Kontrolluppgift, betalningsmottagare_typ, Ärvd, U_Efternamn, U_Förnamn, U_Personnummer, Ersättningstyp FROM dbo.v_Betalning_kontrolluppgift_Utskick</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="år" DataSetColumn="år" />
+              <Mapping SourceColumn="Efternamn" DataSetColumn="Efternamn" />
+              <Mapping SourceColumn="förnamn" DataSetColumn="förnamn" />
+              <Mapping SourceColumn="personnummer" DataSetColumn="personnummer" />
+              <Mapping SourceColumn="OrganisationsNummer" DataSetColumn="OrganisationsNummer" />
+              <Mapping SourceColumn="calc_Kontrolluppgift" DataSetColumn="calc_Kontrolluppgift" />
+              <Mapping SourceColumn="betalningsmottagare_typ" DataSetColumn="betalningsmottagare_typ" />
+              <Mapping SourceColumn="Ärvd" DataSetColumn="Ärvd" />
+              <Mapping SourceColumn="U_Efternamn" DataSetColumn="U_Efternamn" />
+              <Mapping SourceColumn="U_Förnamn" DataSetColumn="U_Förnamn" />
+              <Mapping SourceColumn="U_Personnummer" DataSetColumn="U_Personnummer" />
+              <Mapping SourceColumn="Ersättningstyp" DataSetColumn="Ersättningstyp" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="B2DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="B2DataSet" msprop:Generator_UserDSName="B2DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Betalning_kontrolluppgift_Utskick" msprop:Generator_TableClassName="v_Betalning_kontrolluppgift_UtskickDataTable" msprop:Generator_TableVarName="tablev_Betalning_kontrolluppgift_Utskick" msprop:Generator_TablePropName="v_Betalning_kontrolluppgift_Utskick" msprop:Generator_RowDeletingName="v_Betalning_kontrolluppgift_UtskickRowDeleting" msprop:Generator_RowChangingName="v_Betalning_kontrolluppgift_UtskickRowChanging" msprop:Generator_RowEvHandlerName="v_Betalning_kontrolluppgift_UtskickRowChangeEventHandler" msprop:Generator_RowDeletedName="v_Betalning_kontrolluppgift_UtskickRowDeleted" msprop:Generator_UserTableName="v_Betalning_kontrolluppgift_Utskick" msprop:Generator_RowChangedName="v_Betalning_kontrolluppgift_UtskickRowChanged" msprop:Generator_RowEvArgName="v_Betalning_kontrolluppgift_UtskickRowChangeEvent" msprop:Generator_RowClassName="v_Betalning_kontrolluppgift_UtskickRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="år" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnår" msprop:Generator_ColumnPropNameInRow="år" msprop:Generator_ColumnPropNameInTable="årColumn" msprop:Generator_UserColumnName="år" type="xs:int" minOccurs="0" />
+              <xs:element name="Efternamn" msprop:Generator_ColumnVarNameInTable="columnEfternamn" msprop:Generator_ColumnPropNameInRow="Efternamn" msprop:Generator_ColumnPropNameInTable="EfternamnColumn" msprop:Generator_UserColumnName="Efternamn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="förnamn" msprop:Generator_ColumnVarNameInTable="columnförnamn" msprop:Generator_ColumnPropNameInRow="förnamn" msprop:Generator_ColumnPropNameInTable="förnamnColumn" msprop:Generator_UserColumnName="förnamn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="personnummer" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnpersonnummer" msprop:Generator_ColumnPropNameInRow="personnummer" msprop:Generator_ColumnPropNameInTable="personnummerColumn" msprop:Generator_UserColumnName="personnummer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrganisationsNummer" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOrganisationsNummer" msprop:Generator_ColumnPropNameInRow="OrganisationsNummer" msprop:Generator_ColumnPropNameInTable="OrganisationsNummerColumn" msprop:Generator_UserColumnName="OrganisationsNummer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_Kontrolluppgift" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncalc_Kontrolluppgift" msprop:Generator_ColumnPropNameInRow="calc_Kontrolluppgift" msprop:Generator_ColumnPropNameInTable="calc_KontrolluppgiftColumn" msprop:Generator_UserColumnName="calc_Kontrolluppgift" type="xs:double" minOccurs="0" />
+              <xs:element name="betalningsmottagare_typ" msprop:Generator_ColumnVarNameInTable="columnbetalningsmottagare_typ" msprop:Generator_ColumnPropNameInRow="betalningsmottagare_typ" msprop:Generator_ColumnPropNameInTable="betalningsmottagare_typColumn" msprop:Generator_UserColumnName="betalningsmottagare_typ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ärvd" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnÄrvd" msprop:Generator_ColumnPropNameInRow="Ärvd" msprop:Generator_ColumnPropNameInTable="ÄrvdColumn" msprop:Generator_UserColumnName="Ärvd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="U_Efternamn" msprop:Generator_ColumnVarNameInTable="columnU_Efternamn" msprop:Generator_ColumnPropNameInRow="U_Efternamn" msprop:Generator_ColumnPropNameInTable="U_EfternamnColumn" msprop:Generator_UserColumnName="U_Efternamn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="U_Förnamn" msprop:Generator_ColumnVarNameInTable="columnU_Förnamn" msprop:Generator_ColumnPropNameInRow="U_Förnamn" msprop:Generator_ColumnPropNameInTable="U_FörnamnColumn" msprop:Generator_UserColumnName="U_Förnamn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="U_Personnummer" msprop:Generator_ColumnVarNameInTable="columnU_Personnummer" msprop:Generator_ColumnPropNameInRow="U_Personnummer" msprop:Generator_ColumnPropNameInTable="U_PersonnummerColumn" msprop:Generator_UserColumnName="U_Personnummer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ersättningstyp" msprop:Generator_ColumnVarNameInTable="columnErsättningstyp" msprop:Generator_ColumnPropNameInRow="Ersättningstyp" msprop:Generator_ColumnPropNameInTable="ErsättningstypColumn" msprop:Generator_UserColumnName="Ersättningstyp">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

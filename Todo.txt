@@ -1,0 +1,8 @@
+21 s 16502 into #t like Följerätt%
+07 s 27134 --like följerätt
+
+
+9 s obetald
+7 s betald
+2 s saknas
+

@@ -1,0 +1,1 @@
+select * from v_betalning_transaktion_post

@@ -1,0 +1,145 @@
+﻿JUST NU:
+
+
+DONE
+Filhanteringen 
+Överför parametrar
+
+Design. 
+Utbetalningsfunkyionen
+Kontrollera fördelninga av orginalsumma in i listan, kontrollera utbetalnings värden
+
+Om visa betalda visa betald (varning (långsam)
+
+Korigera så att saknad syns (isnull(belopp,0) och Namn='Saknas' Enamn='Mottagare')Om visa felaktig visa Saknas
+
+DELA Vy till tre st Obetald,BEtald,Sakas.
+Utan Collation
+
+OKÄNDMOTTAGARE RÖD
+Pnr
+Korrigera summering ar på betalda (skall ejbsummeras) 
+Avrundning 
+KOda om sqlanropet till full sql. inline NIX
+Filter i utbetalning 
+STATUS kodning färg och status text
+Korrigera fonter. 
+100 kr
+Betalstatus filter
+Filter för STATUS default OBETALD
+Sorteringen
+
+
+
+
+
+
+TransForm
+
+Förbered Demo:
+	ca 2000 rader i första fönstret
+	ca 500 rader i andra fönstret och 7000 rader dolda
+	Förnamn like 'P*'
+
+
+
+
+
+PRestanda v_betalning_godkänd väldigt långsam.
+Kontrollera inparametrar på sala vuyer för hastighet.
+
+
+	BElopp>100
+
+Hämta 
+Färdiga betalningar 
+Litsa på huvud.
+	Rapport acconto
+	Sammanställing underlag	Lista på utbetalade belopp.
+sp_betalning_fördelning 34941 ger felaktig fördelning 85% summan stämmer men fördelningsnyckeln gör det inte.
+	Saknar också kontroll på att underlaget finns och att det inte redan fördelats
+**09:30
+Kalkylera moms och administrativa avdrag stämmer inte för re
+filter mottagare_efternamn
+filter mottagare_förnamn
+filter mottagare_like
+(Updatera filtertexterna i Underlag också)
+Kontokommentar måste snyggas til
+
+Kontrollera vad som händer med poersonkonto  går på bankkonto.
+UNdersök hastigheten på fönstret.
+
+
+
+PRestanda är nästa steg.
+Eiders Sp behöver like 'kkk%'
+
+Testas på plats. om det fungerar bättre så tstruntar vi i det.
+På WLAN är 16000 rader ej fungerande egentiligen
+
+Gör Bankgiroutbetalning grå
+Gör AVI utbetalning grå
+Gör Utlandsbetalning (Gråad)
+
+
+inläsning tar 2 minuter. ca 30 sek på bus.
+Sortering första tar 40 sek, byte descasc 4 sek , byte av sorteringskolumn 40 sek 
+Vi första inläsing tar det 40 sek att läsa in , 1 minut att sätta upp trädet och 40 sek att sortera.
+utför måste kunna avbrytas.
+
+
+Frågor 
+Skall vi spara kryssen? Ja inför Previews och filtillverkning då . Kanske senare
+
+Synkronisera betalingar ett första fönster som visar antalet rader.
+
+Vy inför betalning m fÖnster.
+Ett fönster för att välja betalningsform (Kontrollera vilka)
+Ett fönster för inställningar för utbetalning.
+
+
+
+
+
+
+
+
+
+Komma ihåg Checkboxes vid filterändring? Annars varning.
+Flytta SQLConnection till settings.Skapasettings för alla instälingar i file.
+Tabuleringsordning
+
+
+
+Kontokanteringen , en rapport.
+En vy för gjorda utbetalningar.
+En funktion för att exportera det man ser till excel/rapport
+Standard beteende för att koppla filter och sortering till Rapport/Excel och SQL-anrop
+STANDARDINSTÄLLNINGAR FÖR UTBETALNINGAR Ifilform
+KR skall genereras NEJ
+Generera de filer som skall genereras.
+Kreditera en betalning.WTF
+Markera e betalnings som gjord i BUSAS
+Skapa utbetalningshistorik i BUSAS.
+
+Moduler som skall fixas:
+Dessa utbetalningsmodeller finns.(Funktion)
+Fuktion fr att flytta en betalning till nästa fönster.
+Välj och godkänn
+Välj och utbetala
+Utbetalningar (alla som idag fins)
+Skapa fil av olika modeller
+Kontrollera restade betalningar i BUSAS
+Kontrollera att det är korrekt info som kommer från BUsasd(inga dubletter)
+Skapa rapport (en första) installera Crystal reports
+Administrativa avdrag och Moms (Funktion)
+KR modulens betalningsunderlag(Kanske?)
+Accontofunktion.
+
+
+
+Ust nu körs v_betalningsunderlag BARA mot BUSAS det vill söäga att koppla in underlag från B2 fungerar ej
+Hur går det med löpnumren i betalingunderlag stora siifror.
+SQL fugerar inte som det skall betalningsunderlagsvyn är för "Kladdig" , måste skrivas om så att alt data som skal anvädas förs över.
+Jag vill inte vara trungen att slå upp information om faktura och faktura rad från Busas.
+rEFnR I vyn ärinte integer. Kanske det räcker med ett ReferensKommentarsfält i kopieringen och att i övrigt låta synctabellen vara.

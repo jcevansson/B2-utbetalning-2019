@@ -1,0 +1,138 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="DBconnectionString" Description="Databaskoppling till B2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=sql.bus.local;Initial Catalog=B2;user id=sa;Connection Timeout=240;Password=Qvt7144</Value>
+    </Setting>
+    <Setting Name="PG_ALT1_Beteckning1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BUS</Value>
+    </Setting>
+    <Setting Name="PG_ALT1_Beteckning2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT1_Kod" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT1_Konto" Type="System.String" Scope="User">
+      <Value Profile="(Default)">940156-3</Value>
+    </Setting>
+    <Setting Name="PG_ALT1_Kundnummer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">K0541</Value>
+    </Setting>
+    <Setting Name="PG_ALT1_Referens" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Marie</Value>
+    </Setting>
+    <Setting Name="PG_ALT2_Beteckning1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT2_Beteckning2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT2_Kod" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT2_Konto" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT2_Kundnummer" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_ALT2_Referens" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_Meddelande" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Betalning från BUS</Value>
+    </Setting>
+    <Setting Name="PG_Produktionsdatum" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PG_Produktionsnummer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PG_ALT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="BG_ALT1_BankGiro" Type="System.String" Scope="User">
+      <Value Profile="(Default)">56557382</Value>
+    </Setting>
+    <Setting Name="BG_ALT2_BankGiro" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_Meddelande" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_Nettorubrik" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_Produktionsdatum" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_Produktionsnummer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="BG_Rubrik" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_Specifikation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BG_ALT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="BG_File_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bankgiro.in</Value>
+    </Setting>
+    <Setting Name="BG_File_Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\</Value>
+    </Setting>
+    <Setting Name="PG_File_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">plusgiro.pg</Value>
+    </Setting>
+    <Setting Name="PG_File_folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\</Value>
+    </Setting>
+    <Setting Name="Data_source" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sql.bus.local</Value>
+    </Setting>
+    <Setting Name="Initial_catalog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">B2</Value>
+    </Setting>
+    <Setting Name="USER_ID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="PASSWORD" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Qvt7144</Value>
+    </Setting>
+    <Setting Name="KU_UG" Type="System.String" Scope="User">
+      <Value Profile="(Default)">167696103121</Value>
+    </Setting>
+    <Setting Name="KU_Namn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Bildkonst upphovsrätt i Sverige</Value>
+    </Setting>
+    <Setting Name="KU_Kontakt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Teresa Tom‚ Brejnell</Value>
+    </Setting>
+    <Setting Name="KU_Adress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hornsgatan 103</Value>
+    </Setting>
+    <Setting Name="KU_PostNR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">11728</Value>
+    </Setting>
+    <Setting Name="KU_PostOrt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">STOCKHOLM</Value>
+    </Setting>
+    <Setting Name="KU_Telefon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">08-545523383</Value>
+    </Setting>
+    <Setting Name="KU_Fax" Type="System.String" Scope="User">
+      <Value Profile="(Default)">08-54553398</Value>
+    </Setting>
+    <Setting Name="KU_Email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">teresa.tome.brejnell@bildupphovsratt.se</Value>
+    </Setting>
+    <Setting Name="EXCEL_Dir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2DataSet_Kontrolluppgiftsummering" targetNamespace="http://tempuri.org/B2DataSet_Kontrolluppgiftsummering.xsd" xmlns:mstns="http://tempuri.org/B2DataSet_Kontrolluppgiftsummering.xsd" xmlns="http://tempuri.org/B2DataSet_Kontrolluppgiftsummering.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=sigrid;Initial Catalog=B2;Persist Security Info=True;User ID=sa;Password=rast4y!?" IsAppSettingsProperty="false" Modifier="Assembly" Name="sigrid.B2.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_betalning_kontrolluppgift_summeringTableAdapter" GeneratorDataComponentClassName="v_betalning_kontrolluppgift_summeringTableAdapter" Name="v_betalning_kontrolluppgift_summering" UserDataComponentName="v_betalning_kontrolluppgift_summeringTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sigrid.B2.dbo" DbObjectName="B2.dbo.v_betalning_kontrolluppgift_summering" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT År, Personnummer, organisationsnummer, Efternamn, Förnamn, calc_SUM_Kontrolluppgift, calc_SUM_Kontrolluppgift_Royalty, calc_SUM_Kontrolluppgift_Ärvd_Royalty FROM dbo.v_betalning_kontrolluppgift_summering</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="År" DataSetColumn="År" />
+              <Mapping SourceColumn="Personnummer" DataSetColumn="Personnummer" />
+              <Mapping SourceColumn="organisationsnummer" DataSetColumn="organisationsnummer" />
+              <Mapping SourceColumn="Efternamn" DataSetColumn="Efternamn" />
+              <Mapping SourceColumn="Förnamn" DataSetColumn="Förnamn" />
+              <Mapping SourceColumn="calc_SUM_Kontrolluppgift" DataSetColumn="calc_SUM_Kontrolluppgift" />
+              <Mapping SourceColumn="calc_SUM_Kontrolluppgift_Royalty" DataSetColumn="calc_SUM_Kontrolluppgift_Royalty" />
+              <Mapping SourceColumn="calc_SUM_Kontrolluppgift_Ärvd_Royalty" DataSetColumn="calc_SUM_Kontrolluppgift_Ärvd_Royalty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="B2DataSet_Kontrolluppgiftsummering" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="B2DataSet_Kontrolluppgiftsummering" msprop:Generator_UserDSName="B2DataSet_Kontrolluppgiftsummering">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_betalning_kontrolluppgift_summering" msprop:Generator_TableClassName="v_betalning_kontrolluppgift_summeringDataTable" msprop:Generator_TableVarName="tablev_betalning_kontrolluppgift_summering" msprop:Generator_RowChangedName="v_betalning_kontrolluppgift_summeringRowChanged" msprop:Generator_TablePropName="v_betalning_kontrolluppgift_summering" msprop:Generator_RowDeletingName="v_betalning_kontrolluppgift_summeringRowDeleting" msprop:Generator_RowChangingName="v_betalning_kontrolluppgift_summeringRowChanging" msprop:Generator_RowEvHandlerName="v_betalning_kontrolluppgift_summeringRowChangeEventHandler" msprop:Generator_RowDeletedName="v_betalning_kontrolluppgift_summeringRowDeleted" msprop:Generator_RowClassName="v_betalning_kontrolluppgift_summeringRow" msprop:Generator_UserTableName="v_betalning_kontrolluppgift_summering" msprop:Generator_RowEvArgName="v_betalning_kontrolluppgift_summeringRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="År" msprop:Generator_ColumnVarNameInTable="columnÅr" msprop:Generator_ColumnPropNameInRow="År" msprop:Generator_ColumnPropNameInTable="ÅrColumn" msprop:Generator_UserColumnName="År" type="xs:int" minOccurs="0" />
+              <xs:element name="Personnummer" msprop:Generator_ColumnVarNameInTable="columnPersonnummer" msprop:Generator_ColumnPropNameInRow="Personnummer" msprop:Generator_ColumnPropNameInTable="PersonnummerColumn" msprop:Generator_UserColumnName="Personnummer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="organisationsnummer" msprop:Generator_ColumnVarNameInTable="columnorganisationsnummer" msprop:Generator_ColumnPropNameInRow="organisationsnummer" msprop:Generator_ColumnPropNameInTable="organisationsnummerColumn" msprop:Generator_UserColumnName="organisationsnummer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Efternamn" msprop:Generator_ColumnVarNameInTable="columnEfternamn" msprop:Generator_ColumnPropNameInRow="Efternamn" msprop:Generator_ColumnPropNameInTable="EfternamnColumn" msprop:Generator_UserColumnName="Efternamn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Förnamn" msprop:Generator_ColumnVarNameInTable="columnFörnamn" msprop:Generator_ColumnPropNameInRow="Förnamn" msprop:Generator_ColumnPropNameInTable="FörnamnColumn" msprop:Generator_UserColumnName="Förnamn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calc_SUM_Kontrolluppgift" msprop:Generator_ColumnVarNameInTable="columncalc_SUM_Kontrolluppgift" msprop:Generator_ColumnPropNameInRow="calc_SUM_Kontrolluppgift" msprop:Generator_ColumnPropNameInTable="calc_SUM_KontrolluppgiftColumn" msprop:Generator_UserColumnName="calc_SUM_Kontrolluppgift" type="xs:double" minOccurs="0" />
+              <xs:element name="calc_SUM_Kontrolluppgift_Royalty" msprop:Generator_ColumnVarNameInTable="columncalc_SUM_Kontrolluppgift_Royalty" msprop:Generator_ColumnPropNameInRow="calc_SUM_Kontrolluppgift_Royalty" msprop:Generator_ColumnPropNameInTable="calc_SUM_Kontrolluppgift_RoyaltyColumn" msprop:Generator_UserColumnName="calc_SUM_Kontrolluppgift_Royalty" type="xs:double" minOccurs="0" />
+              <xs:element name="calc_SUM_Kontrolluppgift_Ärvd_Royalty" msprop:Generator_ColumnVarNameInTable="columncalc_SUM_Kontrolluppgift_Ärvd_Royalty" msprop:Generator_ColumnPropNameInRow="calc_SUM_Kontrolluppgift_Ärvd_Royalty" msprop:Generator_ColumnPropNameInTable="calc_SUM_Kontrolluppgift_Ärvd_RoyaltyColumn" msprop:Generator_UserColumnName="calc_SUM_Kontrolluppgift_Ärvd_Royalty" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,215 @@
+﻿2009-11-24
+AVrunda moms
+Tag bort amount
+Agg_level_text skall visa Netto l<=2 och Brutto>2
+Agg_Total_amount är Netto,level2 d.v.s. bp.netto
+text
+l=0
+ PLUSGIRO Datum     Totalt Nettobelopp(calc ingående BP.netto)
+TT= MOMS,AvDRAG,BRUTTO (SUM ingående BP.Brutto,Avdrag,MOMS)
+	l=1	 POSTGIRO   Nettobelopp(calc ingående BP.netto)
+	TT= MOMS,AvDRAG,BRUTTO (SUM ingående BP.Brutto,Avdrag,MOMS)
+		l=2 MOTTAGARE Netto  bp.netto 
+		TT= Kontokommentar el. Adreskommentar  newline  bp.Moms,tt.Avdrag,"Brutto" bp.Brutto
+			l=3 Betalning_typ IR-FOTO, Upphovsman , Rätth. Fördelning %/Ombud/Upphov.
+			TT=underlag_kommentar  newline  bg.moms "%", bg.avdrag "%", bg.calc_belopp_netto , bg.belopp
+Funktionen Totalt nettobelopp är level=2 summa (netto)
+Funktionen sum(ColNamn,level) decimal
+summerar kolumenn ColoNamn på level
+
+
+Slå upp kontonummer, banknummer,clearingnummer, adressinfo .
+utbetalng_post måste tas bort null värde samma transaktion.(Behöver det för summeringsarbetet)
+
+2009-11-24
+Kontrollera Vad som skall landa på Bankgiro och Plusgiro
+Gör postgiroutbetalning
+	Fönster	(summor PG, Moms, Avdrag  Summor på TYP?)
+		Inställingar (med mouse over?) (grå)
+			tag dem från BUsas
+		Förhandsgranska utbetalning (Grå)
+		Gör välj fil
+		Kör
+			Skapa huvud retrun sessionID betalningstyp
+			AddID to Session Kontrollerar om dennaq mottagare finns sedan tidigare på denna utbetalning i så fall returnera postID anars skapa post o skriv postID i underlag
+		Summor och filgenerering.
+
+Föröver transaktions id från skapa till add
+
+felsök add.
+
+
+
+
+--Modifiera tabell utbetalning_post med korrekta tabeller och alow null
+--Insert rows utbetalning_post
+--Insert 1 rad 
+kör summeringar på poster i sum=(select sum(sum) from utbetalning_godkänd where utbetalning_post=)
+
+
+2009-11-23
+Auto ikryss 
+filter mottagare_typ 
+filter_kontoTyp multiselect
+filter_amoiunt
+
+Sortera på korrekt summa.
+Debugga dold funtionen
+- Group felaktig på enskilda rader på systerorganisation
+
+Status  efter Dold/Visa funktion eller varför körs inte summeringen eter dold/visa
+
+statusupdatering vid ikryss "handles"
+uTBETALNINGTREEvIEW GLIDER SNETT
+Tag bort test i menyn
+function Dölj
+och i Godkända skall menyvalet finnas gråad(?) 
+
+Rubriken i fönster huvudet.
+Lägg till kolumnen Dold i Underlag 
+FElet är i DAO som får convertion error från decimal till Int
+
+Första fönstret heter vyn något annat
+Texten level 2 skall vara  Datum Upphovsman (upphovsman_belopp Föredelning %) calc_belopp_netto 
+ToolTip texten level=2 skall vara Betalningsdatum, Upphovsman, calc_belopp_netto(?)
+
+Fördelingsinformation i trädet.
+calc_Belopp (efter fördelning)
+calc_Moms
+calc_Admin
+calc_Belopp_netto (efter fördelning-Moms-Admin?)
+
+
+2009-11-19
+testat lokalt fortfarande långsamt vid inga filter.
+mARKERA ALLA MÅSTE GE FEEDBACK
+
+2009-11-18
+Checkable.
+Feedback på [sp_betalning_fördelning] vid misslyckande eller då det inte fins underlag
+dE UTAN MOTTAGARE GER INGEN FEEDBACL skall vi göra en boolean eller en procentsats som säger hur stor del som kan betalas ut?
+Några markeras inte(saknar mottagare dock ingen feedback på detta)
+MarkedPaid  är ganksa långsamt.	Akkumulera 100 innan skick?
+
+Per* syns fortfarande efter man kryssat ur datum filtret som ej heller ändras.(Filtertexten uppdateras inte kanske om kryssrutan ejn är ukryssas)
+fÄRGMARKETRAT de som saknar mottagare.
+Testkör
+Progressbar.
+Selectsats för Mottagare jobbas det på.
+
+1009-11-17
+Funktion för att markera alla betalningar
+Fönster med feedback (x av CheckedRows)
+
+Efternamn   A<Efternamn<B skall visa alla A* till B*
+
+Verifiera storleksändringar av fönster inte fastnar.
+TreeView måste följa med Googla
+2009-1116
+
+Läs in ALLA raderna med feedback på antalet i fönstret.(Kankse default Att gömda inte visas)
+FILTRERING
+Ev. Förberäkning mot filter "Antal rader som filterinställningarna ger"
+1:a LEV
+Verifiera att alla betalningar går in och att det är korrekt.
+
+Feedback på inläsning av lista
+Formatera input på Filter och sortering.
+
+Filter för typ skall vara multipleselect
+
+FILTER->Count (antalrader)
+FILTER->STATUS  snygga till texten så att den stämmer med vad man ser.
+FILTER->UPPDATERA
+FILTER DATUM default
+Filter datum dena vecka Default
+Totalsumman skall avrundas
+Filter_Amount skall kryssas i vid enter i MI
+
+Filter alla skall ha varning
+Generera SQL -> Where alt. Iterera genom 
+Just nu Endast Repro,Följerätt,ST,IR   (Kontrollera IRFOTO,Bildbyrå och KR
+STATUSRAD som uppdateras med text kring filterring och sortering. En funktion som genererar en statussträng från filter
+Antal ikryssade rader?
+
+Amountfilter
+Uppdatera satusrad skall formateras korrekt
+Antal rader skall räknas vid anrop och ge feedback
+
+IKRYSSningarna ger inte skuggningar och alla siblings
+Iryssningar funkar inte som de skall
+Sumering =0
+
+2009-11-12
+Ändring av filter skall köra reload eller sort.
+
+Hantera det faktum att man tappar sorteringen när man filtrerar.
+NUmeric på Amount 
+DATUMVALformat och datepicker
+Waitcursor
+
+- Något fel med amountfilter som gör att endast den första tas bort.
+refill skall läsa in rubbet på nytt.
+Kodar amountfilter direkt på datasettet.
+2009-11-11
+Filter_Amount skall uppdatera menyvärdet, Statusen och trigga refill på Enter
+Filter ändring skall göra refill utom amount filter som inte behöver köras om amountfilter är mindre begränsande än gammalt amountfilter
+
+Byt ut refNr o RefNr_rad mot kommentar
+Filer_Amount_MI skall trigga vid ikryssning.
+Fixa nya fält i listan baserat på ny vy.
+Uppdaterat databas med Eider.
+Minimera Overidables och Overida dem i resp fönster.
+
+2009-11-05
+Filter för Amount Skall ligga i trädet
+Filter för Namn,BEtalningstyp m.m. skall ligga i DataView med reload av trädet.(Kryssen skall inte kommas ihåg.)
+Filter för datum är mot databasen och default denna vecka eller getdate-10 dagar , reload av DataView och Träd
+Datumformat i foleer
+
+SORTERING
+	På amount.
+	Stigande skall trigga också
+	
+Registrerat datum är det som skall användas.
+
+Enum på sortCol and AscDesc
+
+Testa 18000 sket sig time out?
+Koda om SQLexecption så att antal rader nollasw ohc någon typ av felmeddelande.
+Kontrollera vyn så vi får reda på vad som skiter sig.
+Skall jag koda om sortering och filter lokalt och göra datum det enda filter som "Reloadar" datat 
+ kanske även Bokstäver ELLER skall jag göra en funktion för Efternamn<X som endast reloadar om det nya kriteriet inte minskar mängden?
+D.v.s. if .fillter(nytt).rowcount=> filter(gammal(.rowcount)) then ReloadDataview and Fill(nytt) annars fill(nytt)
+Vy skall vara readonly nej den skall vara editable men inte new och inte delete. Kör update på aölla ändrade datarader med hjälp av Updatefunktionen.
+Uopdate SetUpdate(Batchsize) kontrollera om det går att använda en sp i Update och om datasettet updateras i vyn då
+Skapa Filter och Sortering Klasser(?)
+Skapa PaymentTreeViewKlass alternativt generalisera mer(?)	
+
+Kontrollera att gruppnamnen finns i Datasettet annars throw
+
+Nu är icheckningen långsam igen. Done
+Objektrecode
+Kryssrutorna skall ligga i Trädet
+
+Multiselect?NEJ
+View för första fönstret
+Datum skall vara LAggd till utbetalning.
+Summering i bakgrunden? ThreadSum   
+TreeView text skall göras korrekt och fulleText skall köras i Thread
+Fixa till vyn så att den ger fler kolumner.PNR, Fakturanr och Fakturarad 
+SetText skall koras pa alla eller vald.
+Rotnod : Namn,PNR,Summa, Kryssasumma
+ChildNod : Betalingstyp Kryssadsumma,summa
+Lövnoderna endast ID,Belopp,Datum, Faktura, Fakturarad 
+En ikryssad ruta som kryssar i barn så skall barnen inte akivera rekursiv kontroll.
+Tooltip i trädet.
+ Jobbar med att få ikryssning oh sumering snabb vet inte vad det är som är långsamt(rekursiv ikryssning?)
+Nej det är Aggtext som är slö FIXAT
+Behöver inte en rutin för att fylla i bakgrunden vid 1071 radaer iallafall
+
+Kör aggtext i bakgrunden för totalen iallafall?
+
+
+SUMMERING 
+	Kör en Totalamount vid inläsning DONE
